@@ -1,0 +1,18 @@
+.Klanten_score_{
+	position: relative;
+	width: 105%;
+	text-align:center;
+	min-height: 300px!important;
+	padding-bottom: 30px;
+}
+.Klanten_score_random_ .Klanten_laatste_ .Klanten_sterren_{
+	position: relative;
+}
+.Klanten_Ster_ {
+	position: relative;
+	display: inline-block;
+}
+.Klanten_score_text_ .Klanten_naam_{
+	position: relative;
+	text-transform: uppercase;
+}

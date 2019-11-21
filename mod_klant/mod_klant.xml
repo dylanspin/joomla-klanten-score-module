@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+	<name>Klanten score</name>
+	<author>Dylan</author>
+	<version>1.1.0</version>
+	<description>Een Klanten score module</description>
+	<files>
+		<filename>mod_klant.xml</filename>
+		<filename module="mod_klant">mod_klant.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>sql/install.sql</filename>
+		<filename>sql/uninstall.sql</filename>
+		<folder>css</folder>
+		<folder>tmpl</folder>
+	</files>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+		</sql>
+	</uninstall>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field name="Locatie" type="text" label="Hash code" default=""/>
+				<field type="radio" name="random" label="Random review" default="1" class="btn-group btn-group-yesno">
+					<option value="1">ja</option>
+					<option value="0">nee</option>
+				</field>
+				<field type="radio" name="updatedata" label="Update database" default="1" class="btn-group btn-group-yesno">
+					<option value="1">ja</option>
+					<option value="0">nee</option>
+				</field>
+
+        <field type="spacer" hr="true"/>
+					<field name="background" type="color" label="Achtergrond kleur" default="#FFFFFF"/>
+				  <field name="moduleleft" type="number" label="Left Module" default="-2"/>
+				  <field name="borderbreed" type="number" label="Border Breedte px" default="5"/>
+					<field name="borderradius" type="number" label="Border Radius px" default="5"/>
+					<field name="borderkleur" type="color" label="Border Kleur" default="#333"/>
+					<field name="textkleur" type="color" label="Text kleur" default="#333"/>
+				<field type="spacer" hr="true"/>
+					<field name="kleurster" type="color" label="Kleur sterren" default="#FFD700"/>
+					<field name="spacingster" type="number" label="Spacing Sterren" default="10"/>
+					<field name="fontster" type="number" label="Font Sterren" default="80"/>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>
